@@ -1,29 +1,52 @@
 <section>
-    <div class="form-box glow">
-        <div class="form-value">
-            <form action="">
-                <h2>Login</h2>
-                <div class="inputbox">
-                    <ion-icon name="mail-outline"></ion-icon>
-                    <input type="text" required>
-                    <label for="">Email</label>
-                </div>
-                <div class="inputbox">
-                    <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" required>
-                    <label for="">Password</label>
-                </div>
-                <div class="forget">
-                    <label for="">
-                        <input type="checkbox">Remember Me
-                    </label>
-                    <a href="#">Forget Password</a>
-                </div>
-                <button>Log In</button>
-                <div class="register">
-                    <p>Don't have an account <a href="#">Register</a></p>
-                </div>
-            </form>
+    <div class="form-box">
+        
+        <div class="button-box">
+            <div #btn id="btn"></div>
+            <button type="button" class="toggle-btn" (click)="login()">Log In</button>
+            <button type="button" class="toggle-btn" (click)="signup()">Sign Up</button>
         </div>
+        <form #loginId  id="login" class="input-group">
+            <div class="input-box">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" required>
+                <label for="">Email</label>
+            </div>
+            <div class="input-box">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="forget-box">
+                <label for="">
+                    <input type="checkbox">Remember Me
+                </label>
+                <a href="#">Forget Password</a>
+            </div>
+            <button type="button" class="toggle-btn login">Log In</button>
+        </form>
+        <form #signupId id="signup" class="input-group">
+            <div class="input-box">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" required>
+                <label for="">Email</label>
+            </div>
+            <div class="input-box">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="input-box">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" required>
+                <label for="">Repeat password</label>
+            </div>
+            <div class="forget-box">
+                <label for="">
+                    <input type="checkbox">I agree to the terms & conditions
+                </label>
+            </div>
+            <button type="button" class="toggle-btn login">Sign Up</button>
+        </form>
     </div>
 </section>
